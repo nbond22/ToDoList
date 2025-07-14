@@ -41,12 +41,11 @@ struct ContentView: View {
         List{
             ForEach(toDos) { toDoItem in
                 Text(toDoItem.title)
-                
             }
         }
         
         if showNewTask {
-            NewToDoView()
+            NewToDoView(toDoItem: ToDoItem(title: "", isImportant: false))
         }
         
     }
